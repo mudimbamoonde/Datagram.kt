@@ -22,7 +22,20 @@ fun main(){
         val input = readln()
         val inp = input.toInt()
 
-        if (inp == 1){
+        //Arithmetic Method[Function
+        arithmetic(inp)
+
+
+    }while (inp != 4)
+
+}
+
+
+fun arithmetic(inp : Int){
+
+
+    when (inp) {
+        1 -> {
             println("Addition Operations")
             println("================================")
             print("Enter Number 1: ")
@@ -32,7 +45,8 @@ fun main(){
             val rst = add(num1,num2)
             println("The result of $num1 + $num2 = $rst")
             Thread.sleep(1000L)
-        }else if (inp == 2){
+        }
+        2 -> {
             println("Subtraction Operations")
             println("================================")
             print("Enter Number 1: ")
@@ -43,7 +57,7 @@ fun main(){
             println("The result of $num1 - $num2 = $rst")
             Thread.sleep(1000L)
         }
-        else if (inp == 3){
+        3 -> {
             println("Division Operations")
             println("================================")
             print("Enter Number 1: ")
@@ -53,17 +67,11 @@ fun main(){
             val rst = division(num1,num2)
             println("The result of $num1 / $num2 = $rst")
             Thread.sleep(1000L)
-        }else{
+        }
+        else -> {
 
             println("Thank you for using this Calculator!!!")
             Thread.sleep(100L)
         }
-
-
-    }while (inp != 4)
-
-
-
-
+    }
 }
-
